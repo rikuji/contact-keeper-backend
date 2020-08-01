@@ -92,7 +92,7 @@ const ContactForm = () => {
         checked={type === 'professional'}
         onChange={onChange}
       />{' '}
-      Personal{' '}
+      Professional{' '}
       <div>
         <input
           type='submit'
