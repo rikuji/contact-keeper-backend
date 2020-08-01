@@ -4,15 +4,12 @@ const db = config.get('mongoURI');
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(
-      'mongodb+srv://lucas:bsb2005@cluster0-0mydt.gcp.mongodb.net/contact-keeper?retryWrites=true&w=majority',
-      {
-        useNewUrlParser: true,
-        useCreateIndex: true,
-        useFindAndModify: false,
-        useUnifiedTopology: true,
-      }
-    );
+    await mongoose.connect(db, {
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+      useUnifiedTopology: true,
+    });
 
     console.log('MongoDB Connected...');
   } catch (err) {
